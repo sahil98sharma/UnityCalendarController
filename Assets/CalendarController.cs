@@ -114,13 +114,13 @@ public class CalendarController : MonoBehaviour
     {
         _calendarPanel.SetActive(true);
         _target = target;
-        _calendarPanel.transform.position = Input.mousePosition-new Vector3(0,120,0);
+        //_calendarPanel.transform.position = Input.mousePosition-new Vector3(0,120,0);
     }
 
     Text _target;
     public void OnDateItemClick(string day)
     {
-        _target.text = _yearNumText.text + "年" + _monthNumText.text + "月" + day+"日";
+        _target.text = _yearNumText.text + "/" + _monthNumText.text + "/" + day;
         _calendarPanel.SetActive(false);
     }
 }
